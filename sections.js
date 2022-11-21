@@ -118,11 +118,11 @@ function createBook(bookInfo, index) {
   const imgWrapper = document.createElement("div");
 
   if (index % 9 == 0 || index % 9 == 5 || index % 9 == 7) {
-    imgWrapper.setAttribute("class", "book-image blue");
+    imgWrapper.setAttribute("class", "book-image");
   } else if (index % 9 == 1 || index % 9 == 3 || index % 9 == 8) {
-    imgWrapper.setAttribute("class", "book-image red");
+    imgWrapper.setAttribute("class", "book-image");
   } else {
-    imgWrapper.setAttribute("class", "book-image yellow");
+    imgWrapper.setAttribute("class", "book-image");
   }
 
   const img = document.createElement("img");
@@ -141,20 +141,6 @@ function createBook(bookInfo, index) {
   title.setAttribute("class", "title");
   title.textContent = `${bookInfo.title}`;
 
-  const rateWrapper = document.createElement("div");
-  rateWrapper.setAttribute("class", "rating");
-  const starsWrapper = document.createElement("div");
-  starsWrapper.setAttribute("class", "stars");
-
-
-
-  const reviews = document.createElement("p");
-  const n = bookInfo.reviews;
-  const numberFormatter = Intl.NumberFormat("en-US");
-  const formatted = numberFormatter.format(n);
-  reviews.textContent = `${bookInfo.rate} (${formatted})`;
-
-  [starsWrapper, reviews].map((el) => rateWrapper.appendChild(el));
 
   const priceWrapper = document.createElement("div");
   priceWrapper.setAttribute("class", "price");
@@ -166,11 +152,11 @@ function createBook(bookInfo, index) {
   [p, price].map((el) => priceWrapper.appendChild(el));
 
   const moreDetailsBtn = document.createElement("button");
-  moreDetailsBtn.textContent = "Book info";
-  moreDetailsBtn.setAttribute("class", "btn btn-white");
+  moreDetailsBtn.textContent = "More info";
+  moreDetailsBtn.setAttribute("class", "btn btn-info");
   const addToCartBtn = document.createElement("button");
-  addToCartBtn.textContent = "Add to cart";
-  addToCartBtn.setAttribute("class", "btn btn-yellow");
+  addToCartBtn.textContent = "Add to bag";
+  addToCartBtn.setAttribute("class", "btn btn-add");
 
   [author, title, rateWrapper, priceWrapper, moreDetailsBtn, addToCartBtn].map(
     (el) => textWrapper.appendChild(el)
