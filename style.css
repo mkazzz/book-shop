@@ -1,0 +1,27 @@
+:root {
+  --global-font-family: Raleway, sans-serif;
+  --global-font-family-sec: 'Open Sans', sans-serif;
+  --global-font-size: 1rem;
+  --global-text-color: #222;
+  --global-primary-title-size: 2rem;
+  --global-background-color: #121621;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  font-family: var(--global-font-family-sec)
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background: var(--global-background-color);
+}
