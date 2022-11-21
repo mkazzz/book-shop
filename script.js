@@ -1,18 +1,15 @@
-const container = document.getElementsByTagName("main");
+import {
+  createHeader,
+  createMain,
+
+} from "./sections.js";
 
 
-let books;
-fetch('assets/json/books.json')
-  .then(response => {
-    return response.json();
-  })
-  .then(data => {
-    books = data;
-  });
+const myApp = document.getElementById("app");
 
 
+window.addEventListener("load", () => {
+  myApp.append(createHeader());
+  myApp.append(createMain());
 
-const header1 = document.createElement("h1");
-
-const node = document.createTextNode("Online book shop");
-header1.appendChild(node);
+});
