@@ -1,0 +1,209 @@
+:root {
+
+  --primary: hsla(207, 91%, 37%, 0.8);
+  --secondary: hsla(230, 56%, 28%, 0.8);
+
+  --pane-padding: 5px 42px;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+/* 
+
+body {
+
+
+  margin: 0;
+  font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif", Tangerine;
+
+  color: #FFF;
+
+
+
+background: linear-gradient(135deg, var(--primary), var(--secondary)),
+url("https://images.unsplash.com/photo-1589402903416-2d02f303d12c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80") no-repeat center center / cover;
+
+}
+
+html {
+  font-size: 10px;
+  font-family: arial;
+  scroll-behavior: smooth;
+  color: darkslategrey;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+
+
+h5 {
+  font-size: 1.4rem;
+}
+
+p {
+  font-weight: 300;
+  line-height: 130%;
+  font-style: normal;
+  font-size: 1.6rem;
+}
+
+body {
+  color: darkslategrey;
+  display: flex;
+  margin: 0 auto;
+}
+
+main {
+  margin: 0 auto;
+}
+
+#app {
+  background: green;
+  width: 116rem;
+  margin: 0 auto;
+}
+
+
+*/
+html {
+  font-size: 10px;
+}
+
+body {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  width: 100%;
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  justify-content: center;
+
+
+}
+
+main,
+aside {
+
+  border: 1px lightcyan solid;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#app {
+  width: 91.2rem;
+}
+
+aside {
+  width: 20rem;
+  background: rgba(255, 255, 255, 0.336);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.167);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Raleway', Helvetica, Arial, sans;
+}
+
+p,
+span,
+div {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-weight: 300;
+  font-size: 1.8rem;
+
+}
+
+ul.book-catalog {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem 6rem;
+  list-style: none;
+  padding-inline-start: 6rem;
+  padding-inline-end: 6rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  ;
+}
+
+li.book-container {
+  border: 1px rgba(255, 255, 255, 0.126);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+
+}
+
+.book-title {
+  color: white;
+  line-height: 120%;
+  margin: 1em 0 0 0;
+}
+
+.book-author {
+
+  line-height: 120%;
+  margin: 1em 0;
+}
+
+.book-descr-cover {
+
+  padding: 2rem;
+
+  border-radius: 10px 0;
+}
+
+.book-cover-wrapper {
+  border-radius: 10px 0;
+
+}
+
+img.book-cover-img {
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  height: auto;
+  max-height: 460px;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+}
+
+.book-descr {
+  display: block;
+}
+
+.book-descr.book-descr-hidden {
+  display: none;
+}
