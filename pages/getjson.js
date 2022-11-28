@@ -1,5 +1,7 @@
 import {
-  addBtnMoreAction
+  addBtnMoreAction,
+  addBookToCart,
+  booksCart
 } from "./cart.js";
 export function getBookList() {
   let df = new DocumentFragment();
@@ -20,7 +22,7 @@ export function getBookList() {
       );
 
       addBtnMoreAction();
-
+      addBookToCart();
 
 
     });
@@ -49,7 +51,8 @@ export function createBookElement(book, index) {
   const bookAuthor = document.createElement('h4');
 
   const bookPrice = document.createElement('span');
-  const bookDescr = document.createElement('p');
+  const bookDescr = document.createElement('div');
+  const bookDescrP = document.createElement('p');
   const addBook = document.createElement('button');
   const readMore = document.createElement('button');
   const closeBookDescr = document.createElement('button');
@@ -88,11 +91,14 @@ export function createBookElement(book, index) {
   readMore.classList.add('read-more-btn');
 
   bookDescrCover.appendChild(bookDescr);
-  bookDescr.innerText = book.description;
   bookDescr.classList.add('book-descr');
-  bookDescr.classList.add('book-descr-hidden');
+  bookDescr.classList.add('modal');
+  bookDescr.appendChild(bookDescrP);
+  bookDescrP.classList.add('book-descr-p');
+  bookDescrP.innerText = book.description;
+
   bookDescr.appendChild(closeBookDescr);
-  closeBookDescr.classList.add('close-book-descr');
+  closeBookDescr.classList.add('close');
   closeBookDescr.innerText = 'close';
 
 

@@ -13,6 +13,7 @@ const myApp = document.getElementById('app');
 const bookDiv = document.createElement('div');
 const docBody = document.querySelector('body');
 let ul = document.createElement('ul');
+const booksCart = [];
 
 
 myApp.append(getBookList());
@@ -22,7 +23,7 @@ myApp.after(createCart());
 
 window.addEventListener("load", () => {
   //init book cart
-  let booksCart = [];
+
   const test = document.getElementsByClassName('book-descr');
 
 
