@@ -2,7 +2,7 @@ export const booksCart = [];
 export function createCart() {
   const df = new DocumentFragment();
   const cartContener = document.createElement('aside');
-  const cartItems = document.createElement('ul');
+  const cartItems = document.createElement('div');
 
 
   cartContener.setAttribute('id', 'cart-items')
@@ -14,10 +14,11 @@ export function createCart() {
     totalSum = document.createElement('p'),
     confirmOrder = document.createElement('a');
 
-
+  cartContener.appendChild(cartItems);
   cartContener.appendChild(cartDescription);
   cartDescription.classList.add('cart-descr');
   cartDescription.innerText = 'Magic place to collect your books';
+  cartContener.appendChild(confirmOrder);
   df.append(cartContener)
   return df;
 
@@ -82,6 +83,7 @@ function getBook(element) {
 
 
 function buildOrderList(element) {
+  const booksCart = [];
   const newBook = {
     bookTitle: element.parentElement.children[0].innerText,
     bookAuthor: element.parentElement.children[1].innerText,
@@ -96,10 +98,10 @@ function buildOrderList(element) {
     bookPrice = document.createElement('div'),
     removeBook = document.createElement('div');
 
-  bag.appendChild(booksList);
-  booksList.classList.add('bag-list');
+  cartContener.appendChild(booksList);
+  cartItems.classList.add('bag-list');
 
-  booksList.appendChild(book);
+  cartItems.appendChild(book);
 
   book.appendChild(bookTitle);
   bookTitle.classList.add('bag-book-title');

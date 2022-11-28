@@ -1,7 +1,7 @@
 import {
   addBtnMoreAction,
   addBookToCart,
-  booksCart
+
 } from "./cart.js";
 export function getBookList() {
   let df = new DocumentFragment();

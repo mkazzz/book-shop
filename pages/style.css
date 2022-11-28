@@ -200,7 +200,10 @@ img.book-cover-img {
 
 }
 
-
+.bagcard img {
+  width: 2rem;
+  float: right;
+}
 
 
 /* modal */
@@ -219,6 +222,12 @@ img.book-cover-img {
 
 .book-descr.book-descr-hidden {
   display: none;
+}
+
+.book-descr.modal {
+  padding: 2rem;
+  font-size: 1.4rem;
+  line-height: 130%;
 }
 
 .close {
